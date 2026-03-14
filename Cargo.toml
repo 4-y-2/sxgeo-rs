@@ -1,0 +1,12 @@
+[package]
+name = "sxgeo-rs"
+description = "Unofficial SypexGeo database files parser."
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/4-y-2/sxgeo-rs"
+keywords = ["geoip", "sypexgeo", "parser", "database"]
+categories = ["parsing", "database implementations", "network-programming"]
+readme = "README.md"
+
+[dependencies]
