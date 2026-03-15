@@ -6,6 +6,7 @@ use std::collections::HashMap;
 use std::fs::File;
 use std::io::{self, Read};
 use std::path::Path;
+use std::fmt;
 
 /// Internal headers of the SypexGeo database.
 #[derive(Debug, Clone)]
@@ -31,6 +32,17 @@ pub struct SxGeo {
     data: Vec<u8>,
     countries_map: HashMap<u8, String>,
 }
+
+impl fmt::Debug for SxGeo {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("SxGeo")
+            .field("header", &self.header)
+            .field("data", &format_args!("<{} bytes>", self.data.len()))
+            .field("countries_map", &format_args!("<{} countries>", self.countries_map.len()))
+            .finish()
+    }
+}
+
 
 impl SxGeo {
     /// Loads the SypexGeo database from a file into memory.
