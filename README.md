@@ -13,4 +13,4 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-sxgeo-rs = "0.1.0"
+sxgeo-rs = "0.1.1"
